@@ -54,3 +54,8 @@ git commit -m "added readme"
 git branch -M main
 git remote add origin git@github.com:jamestcole/test-ssh.
 ```
+
+## Troubleshooting
+
+for issues
+like this and more like this
