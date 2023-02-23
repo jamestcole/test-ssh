@@ -25,11 +25,17 @@ So, this lifecycle continues until we get a code or a product which can be deplo
 
 ## Git work flow
 
-![Alt text](gitworkflow.PNG "a title")
+Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows. This enables teams to have many branches running on different systems to scale up their development without causing problems.
+
+![Alt text](gitworkflow.png "a title")
 
 ## Jenkins work flow
 
-![Alt text](jenkinsworkflow.PNG "a title")
+While standard Jenkins “freestyle” jobs support simple continuous integration by allowing you to define sequential tasks in an application lifecycle, they do not create a persistent record of execution, enable one script to address all the steps in a complex workflow, or confer the other advantages of pipelines.
+
+In contrast to freestyle jobs, pipelines enable you to define the whole application lifecycle. Pipeline functionality helps Jenkins to support continuous delivery (CD). The Pipeline plugin was built with requirements for a flexible, extensible, and script-based CD workflow capability in mind.
+
+![Alt text](jenkinsworkflow.png "a title")
 
 ## SDLC work flow stages
 
