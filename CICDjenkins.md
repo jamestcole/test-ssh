@@ -79,10 +79,70 @@ tick the box in build triggers for configuration
 GitHub hook trigger for GITScm polling
 
 
+## Completing the CICD pipeline
+
+Firstly let's start a dev branch on our chosesn repository, navigate to branches, new branch on github and type dev.
+
+![Alt text](branches.PNG "a title")
+
+now in your gitbash terminal to update the details of your branches and change branch (while in your repository folder):
+
+`git fetch`
+
+`git checkout dev`
+
+## Making a jenkins Pipeline to merge trees
+
+### Testing the app in your Dev branch
+To run a job on jenkins testing the app in your dev branch, simply change the */main branch specifier to dev, keep the other settings as normal. You should be able to see changes pushed to your dev branch in github.
+
+
+### Automating the Dev and Main branch Merges
+To automate it and merge the dev branch with your main branch, start a new Item in jenkins and change the following , in post build actions select build other projects and select your last item this is so that your dev branch still updates, select Trigger if build is stable.
+
+![Alt text](ci8.PNG "a title")
+
+Then add Git Publisher, select Push only if build succeeds and merge results. In the pranches section add main and origin in Branch to push and Target remote name
+
+![Alt text](ci9.PNG "a title")
+
+Now once you push a change from gitbash in your dev branch, it should automatically go to your main branch.
+
+### Sending the Main Branch to the EC2 instance
+To automate it so that if the branches are merged successfully, the main branch should be sent to an EC2 instance.
+
+Change the build triggers to include the last item:
+
+![Alt text](ci10.PNG "a title")
+
+Provide SSH agaent details in build environment including a key made for this task.
+
+![Alt text](ci11.PNG "a title")
+
+Now got to the execute shell, you should put in some commands to get your app up and running.
+
+![Alt text](ci12.PNG "a title")
+
+Now it is ready to be built, save the the changes and go to the aws EC2 console to start up your instance before you do.
+
+![Alt text](pipelineappcomplete.PNG "a title")
+
+
+
 ## Troubleshooting
 
-- ssh access issues/denied/
+### ssh access issues/denied/
+
+Solution :
+
+Make sure the public key in Git has write permissions , if it does not delete it and then remake it with write permissions.
+
+
 - repository not found /url
-- Can't ssh into ec2
+
+### Can't ssh into ec2
+
+make sure the security inbound rules are configured correctly there should be a port 22 your IP.
+
 - port 22 issues
 - Folder structure issues
