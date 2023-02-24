@@ -42,7 +42,9 @@ Once you have completed this, you can write (insert your keyname):
 
 `cat keyname.pub`
 
-This can now be copied into your repository settings on GitHub
+This can now be copied into your repository settings on GitHub, got to settings, Deploy keys and copy without any spaces, then add the key.
+
+![Alt text](ci4.PNG "a title")
 
 How to Add the key:
 click on the add key button, add your private key, this can be found by looking in your ssh folder. there should be a key labeled as the one you made earlier. 
@@ -53,12 +55,6 @@ click on the add key button, add your private key, this can be found by looking 
 
 You can now copy and paste the output, remember to leave no spaces.
 
-jenkins instructions - James-CI
-log rotation - 3 builds
-github project - tech201 - http
-office 365 - restrict where this project - sparta-ubuntu-node
-source code management- git - repository ssh file forom tech201
-credentials - enter public key in repo settings and private key in jenkins
 
 git add .
 git commit 
