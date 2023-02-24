@@ -125,6 +125,22 @@ Now got to the execute shell, you should put in some commands to get your app up
 
 Now it is ready to be built, save the the changes and go to the aws EC2 console to start up your instance before you do.
 
+Use an appropiate naming convention name-group-jenkins-app and set up ubuntu 18.04
+
+![Alt text](ci14.PNG "a title")
+
+Set up t2.micro and the usual key pair:
+
+![Alt text](ci15.PNG "a title")
+
+Set up the vpc as the default and create a new security group
+
+![Alt text](ci16.PNG "a title")
+
+For the security rules set up the following:
+
+![Alt text](ci13.PNG "a title")
+
 ![Alt text](pipelineappcomplete.PNG "a title")
 
 
