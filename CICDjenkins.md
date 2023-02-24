@@ -32,6 +32,8 @@ In the source code management:
 
 ![Alt text](ci3.PNG "a title")
 
+### How to create the key pair and deploy public key
+
 To create the public and private key pair in gitbash , insert your email address in the following commands.
 
 `cd .ssh`
@@ -46,7 +48,7 @@ This can now be copied into your repository settings on GitHub, got to settings,
 
 ![Alt text](ci4.PNG "a title")
 
-How to Add the key:
+## How to Add the private key:
 click on the add key button, add your private key, this can be found by looking in your ssh folder. there should be a key labeled as the one you made earlier. 
 
 `cd .ssh`
@@ -54,6 +56,17 @@ click on the add key button, add your private key, this can be found by looking 
 `cat keyname`
 
 You can now copy and paste the output, remember to leave no spaces.
+
+In build environment:
+- tick Provide Node and npm bin/ folder to PATH
+- NodeJS Installation is Sparta-Node-JS
+- The Cache should fill in by default
+
+![Alt text](ci5.PNG "a title")
+
+### How to set up the GitHub hook trigger for GITScm polling
+
+go back to jenkins and configure your item,
 
 
 git add .
