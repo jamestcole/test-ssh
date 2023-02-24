@@ -66,7 +66,10 @@ In build environment:
 
 ### How to set up the GitHub hook trigger for GITScm polling
 
-go back to jenkins and configure your item,
+go back to jenkins and configure your item, in Build Triggers tick the box, GitHub hook trigger for GITScm polling.
+
+![Alt text](ci6.PNG "a title")
+
 
 
 git add .
