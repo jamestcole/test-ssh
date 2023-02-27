@@ -143,7 +143,7 @@ For the security rules set up the following:
 
 ![Alt text](pipelineappcomplete.PNG "a title")
 
-
+http://18.130.94.221:8080/
 
 ## Troubleshooting
 
@@ -152,6 +152,9 @@ For the security rules set up the following:
 Solution :
 
 Make sure the public key in Git has write permissions , if it does not delete it and then remake it with write permissions.
+
+![Alt text](keysolution.PNG "a title")
+
 
 
 - repository not found /url
